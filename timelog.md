@@ -77,7 +77,6 @@
 
 ## 24 Oct 2022
 * *1 hour* made survey for ordering requirements
-* *1 hour* built sign in for app
 
 ## 25 Oct 2022
 * *1 hour* reading design of other dissertations
@@ -85,5 +84,6 @@
 
 ## 27 Oct 2022
 * *1 hour* sent requirements to people
+* *1 hour* built sign in for app
 
 

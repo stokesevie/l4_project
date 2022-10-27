@@ -84,6 +84,6 @@
 
 ## 27 Oct 2022
 * *1 hour* sent requirements to people
-* *1 hour* built sign in for app
+* *1 hour* started to build sign in for app
 
 

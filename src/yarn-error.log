@@ -1,0 +1,57 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add styled-components
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: connect ENETUNREACH 104.16.27.35:443 - Local (0.0.0.0:58320)
+      at internalConnect (node:net:1041:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at emitLookup (node:net:1187:9)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:103587:28
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:103496:13
+      at RawTask.module.exports.RawTask.call (/usr/local/lib/node_modules/yarn/lib/cli.js:79584:19)
+      at flush (/usr/local/lib/node_modules/yarn/lib/cli.js:79666:29)
+      at processTicksAndRejections (node:internal/process/task_queues:78:11)
+
+npm manifest: 
+  {
+    "name": "l4_project",
+    "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web"
+    },
+    "dependencies": {
+      "expo": "~46.0.16",
+      "expo-constants": "~13.2.4",
+      "expo-status-bar": "~1.4.0",
+      "firebase": "^9.12.1",
+      "formik": "^2.2.9",
+      "react": "18.0.0",
+      "react-native": "0.69.6"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 
 import {Formik} from 'formik';
-import {Octicons} from '@expo/vector-icons';
+import {Octicons, Ionicons} from '@expo/vector-icons';
 import {
   StyledContainer,
   InnerContainer,
@@ -14,6 +14,8 @@ import {
   StyledInputLabel,
   StyledTextInput,
   RightIcon,
+  StyledButton,
+  ButtonText,
   colours
 } from './../components/styles';
 
@@ -21,6 +23,7 @@ import {View} from 'react-native'
 const {secondary,primary}= colours;
 
 const Login = () => {
+  const[hidePassword,setHidePassword]= useState(true);
   return (
     <StyledContainer>
       <InnerContainer>
@@ -45,6 +48,23 @@ const Login = () => {
               value={values.email}
               keyboardType="email-address"
             />
+            <TextInput 
+              label ="Password"
+              icon ="lock"
+              placeholder = "********"
+              placeholderTextColor={primary}
+              onChangeText={handleChange('password')}
+              onBlur={handleBlur('password')}
+              value={values.password}
+              secureTextEntry={true}
+              isPassword={true}
+
+            />
+            <StyledButton onPress={handleSubmit}>
+              <ButtonText>
+                Login
+              </ButtonText>
+            </StyledButton>
           </StyledFormArea>)}
 
         </Formik>
@@ -53,7 +73,7 @@ const Login = () => {
   );
 };
 
-const TextInput = ({label, icon, ...props}) =>{
+const TextInput = ({label, icon, isPassword, ...props}) =>{
   return(
     <View>
       <LeftIcon>
@@ -61,6 +81,11 @@ const TextInput = ({label, icon, ...props}) =>{
       </LeftIcon>
       <StyledInputLabel>{label}</StyledInputLabel>
       <StyledTextInput {...props}/>
+      {isPassword && (
+        <RightIcon>
+          <Ionicons size={30} colour={primary}/>
+        </RightIcon>
+      )}
     </View>
   )
 }

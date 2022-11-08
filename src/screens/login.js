@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-
+import { NavigationHelpersContext, useNavigation } from '@react-navigation/native';
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./firebase"
 import {Formik} from 'formik';
 import {Octicons, Ionicons} from '@expo/vector-icons';
 import {
@@ -19,11 +21,39 @@ import {
   colours
 } from './../components/styles';
 
-import {View} from 'react-native'
+import {View} from 'react-native';
 const {secondary,primary}= colours;
 
+
 const Login = () => {
-  const[hidePassword,setHidePassword]= useState(true);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const navigation = useNavigation();
+
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        navigation.replace("StudentDashboard");
+      }
+    })
+
+    return unsubscribe
+  }, [])
+
+
+
+  const handleLogin = () => {
+    signInWithEmailAndPassword(email, password)
+      .then(userCredentials => {
+        const user = userCredentials.user;
+        console.log('Logged in with:', user.email);
+        navigation.navigate("StudentDashboard");
+      })
+      .catch(error => alert(error.message))
+  }
+  
   return (
     <StyledContainer>
       <InnerContainer>
@@ -32,40 +62,37 @@ const Login = () => {
         <PageTitle>Mindscape</PageTitle>
         <SubTitle>Log in</SubTitle>
         <Formik
-          initialValues={{email:'', password:''}}
-          onSubmit={(values)=> {
-            console.log(values)
-          }}
         >
-          {({handleChange,handleBlur,handleSubmit,values})=> (<StyledFormArea>
+          <StyledFormArea>
             <TextInput 
               label = "Email"
               icon ="mail"
               placeholder = "john@mail.com"
               placeholderTextColor={primary}
-              onChangeText={handleChange('email')}
-              onBlur={handleBlur('email')}
-              value={values.email}
+              onChangeText={text => setEmail(text)}
+              value={email}
               keyboardType="email-address"
+              autoCapitalize='none'
             />
             <TextInput 
               label ="Password"
               icon ="lock"
-              placeholder = "********"
-              placeholderTextColor={primary}
-              onChangeText={handleChange('password')}
-              onBlur={handleBlur('password')}
-              value={values.password}
-              secureTextEntry={true}
               isPassword={true}
+              placeholder="Password"
+              value={password}
+              onChangeText={text => setPassword(text)}
+              placeholderTextColor= {'white'}
+              autoCapitalize='none'
+              secureTextEntry
 
             />
-            <StyledButton onPress={handleSubmit}>
+            <StyledButton
+                onPress={handleLogin}>
               <ButtonText>
                 Login
               </ButtonText>
             </StyledButton>
-          </StyledFormArea>)}
+          </StyledFormArea>
 
         </Formik>
       </InnerContainer>

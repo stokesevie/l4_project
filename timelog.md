@@ -86,4 +86,41 @@
 * *1 hour* sent requirements to people
 * *5 hours* started to build sign in for app
 
+## 28 Oct 2022
+* *0.5 hour* met with supervisor
+* *1 hour* made changes to survey
+
+## 30 Oct 2022
+* *1 hour* made survey accessible and sent it to people
+* *1 hour* researched back ends
+
+## 2 Nov 2022
+* *0.5 hour* made survey for wireframes
+
+## 3 Nov 2022
+* *0.5 hour* had meeting with supervisor
+* *0.5* ethics form filled out
+
+# 6 Nov 2022
+* *5 hours* set up backend with firebase
+
+# 7 Nov 2022
+* *1 hour* wrote up survey results
+* *1 hour* wrote up about firebase
+
+# 8 Nov 2022
+* *3 hours* log in working
+* *2 hours* splash screen and icon created and linked up
+
+# 9 Nov 2022
+* *4 hours* set up CI
+* *2 hours* fixed dependency issues
+* *0.5 hours* issues set up
+
+# 10 Nov 2022
+* *2 hours* worked on dashboard
+* *0.5 hour* meeting with supervisor
+
+
+
 

@@ -15,7 +15,8 @@ const firebaseConfig = {
   storageBucket: "fir-auth-3d5b7.appspot.com",
   messagingSenderId: "854301273919",
   appId: "1:854301273919:web:96ee1ff5cf58d0a518ad8a",
-  measurementId: "G-11SY5ZB0KB"
+  measurementId: "G-11SY5ZB0KB",
+  databaseURL : "https://fir-auth-3d5b7-default-rtdb.firebaseio.com/"
 };
 
 // Initialize Firebase

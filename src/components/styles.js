@@ -24,6 +24,11 @@ export const InnerContainer = styled.View`
     width: 100%
     align-items: center;
 `;
+
+export const Dashboard = styled.View`
+    flex:1px;
+    padding-top:40px;
+`;
 export const Logo = styled.Image`
     width: 250px;
     height: 200px;
@@ -43,6 +48,48 @@ export const SubTitle= styled.Text`
     letter-spacing: 1px;
     font-weight: bold;
     colour: black;
+    text-align:center;
+`;
+
+export const DashboardInfo = styled.View`
+    padding-left:10px;
+    padding-right:10px;
+    margin:10px;
+`;
+
+export const StyledNotification = styled.TouchableOpacity`
+    padding: 15px;
+    background-color: ${secondary};
+    justify-content: center;
+    border-radius: 5px;
+    height: 120px;
+`;
+export const StyledNotificationPast = styled.TouchableOpacity`
+    padding: 15px;
+    background-color: ${secondary};
+    justify-content: center;
+    border-radius: 5px;
+    height: 300px;
+`;
+
+export const StyledNotificationMessage = styled.TouchableOpacity`
+    padding: 15px;
+    background-color: ${secondary};
+    justify-content: center;
+    border-radius: 5px;
+    height: 120px;
+`;
+export const NotificationTitle = styled.Text`
+    color: ${primary};
+    font-size: 16px;
+    font-weight: bold;
+    width:70%;
+`;
+
+export const NotificationText = styled.Text`
+    color: ${primary};
+    padding:15px;
+    font-size: 16px;
 `;
 
 export const StyledFormArea = styled.View`
@@ -64,6 +111,10 @@ export const StyledInputLabel = styled.Text`
     color: black;
     font-size: 15px;
     text-align: left;
+`;
+export const RightArrow = styled.View`
+    left:90%;
+    align-items:right;
 `;
 
 
@@ -93,4 +144,11 @@ export const StyledButton = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
     color: ${primary};
     font-size: 16px;
+`;
+
+export const Toolbar = styled.View`
+    color: ${secondary};
+    height:30px;
+    bottom-padding:0px;
+    
 `;

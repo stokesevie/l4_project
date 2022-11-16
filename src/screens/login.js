@@ -58,7 +58,7 @@ const Login = () => {
       <InnerContainer>
         <StatusBar style="dark"/>
         <Logo resizeMode="cover" source={require('./../assets/icon.png')} />
-        <PageTitle>Mindscape</PageTitle>
+        <PageTitle>Mindmap</PageTitle>
         <SubTitle>Log in</SubTitle>
         <Formik
         >

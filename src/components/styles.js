@@ -26,8 +26,8 @@ export const InnerContainer = styled.View`
 `;
 
 export const Dashboard = styled.View`
-    flex:1px;
     padding-top:40px;
+    padding:30px
 `;
 export const Logo = styled.Image`
     width: 250px;
@@ -54,22 +54,24 @@ export const SubTitle= styled.Text`
 export const DashboardInfo = styled.View`
     padding-left:10px;
     padding-right:10px;
+    padding-top:10px;
     margin:10px;
 `;
 
 export const StyledNotification = styled.TouchableOpacity`
     padding: 15px;
     background-color: ${secondary};
-    justify-content: center;
     border-radius: 5px;
     height: 120px;
+    margin-bottom: 20px;
 `;
 export const StyledNotificationPast = styled.TouchableOpacity`
     padding: 15px;
     background-color: ${secondary};
     justify-content: center;
     border-radius: 5px;
-    height: 300px;
+    height: 270px;
+    margin-bottom: 20px;
 `;
 
 export const StyledNotificationMessage = styled.TouchableOpacity`
@@ -78,6 +80,7 @@ export const StyledNotificationMessage = styled.TouchableOpacity`
     justify-content: center;
     border-radius: 5px;
     height: 120px;
+    margin-bottom: 20px;
 `;
 export const NotificationTitle = styled.Text`
     color: ${primary};
@@ -113,8 +116,13 @@ export const StyledInputLabel = styled.Text`
     text-align: left;
 `;
 export const RightArrow = styled.View`
-    left:90%;
-    align-items:right;
+    padding: 10px;
+    margin-left: auto;
+`;
+
+export const ContentsNotification = styled.View`
+    display: flex;
+    flex-direction:row;
 `;
 
 
@@ -147,8 +155,27 @@ export const ButtonText = styled.Text`
 `;
 
 export const Toolbar = styled.View`
-    color: ${secondary};
-    height:30px;
-    bottom-padding:0px;
+    height:110px;
+    position :fixed
+    width:110%;
+    left:-10px;
+    border-width:10px;
+    border-top-color:${secondary};
+    border-left-color:${primary};
+    border-right-color:${primary};
+    padding: 10px;
+    display: flex;
+    flex-direction:row;
+ 
+`;
+
+export const IconToolbar = styled.TouchableOpacity`
     
 `;
+
+export const IconConstraint = styled.View`
+    justify-content:space-between;
+    display: flex;
+    flex-direction:row;
+    width:94.5%;
+`

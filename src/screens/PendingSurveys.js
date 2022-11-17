@@ -31,7 +31,7 @@ const PendingSurveys = ({navigation}) => {
         <View>
             <ContentJustified>
             <Title>
-            <Arrow><Ionicons name="ios-arrow-back" size={30} onPress={()=> {navigation.navigate("StudentDashboard")}} /></Arrow>
+            <Arrow><Ionicons name="ios-arrow-back" size={30} onPress={()=> {navigation.navigate("TutorDashboard")}} /></Arrow>
             <PageTitle>Mindmap</PageTitle>
              <Arrow></Arrow>  
             </Title>

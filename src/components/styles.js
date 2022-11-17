@@ -40,6 +40,7 @@ export const PageTitle = styled.Text`
     font-weight: bold;
     color: ${secondary};
     padding: 10px;
+
 `;
 
 export const SubTitle= styled.Text`
@@ -116,9 +117,11 @@ export const StyledInputLabel = styled.Text`
     font-size: 15px;
     text-align: left;
 `;
-export const RightArrow = styled.View`
+
+export const Arrow = styled.Text`
     padding: 10px;
-    margin-left: auto;
+    width:50px; 
+    height: 50px 
 `;
 
 export const ContentsNotification = styled.View`
@@ -126,6 +129,12 @@ export const ContentsNotification = styled.View`
     flex-direction:row;
 `;
 
+export const Title = styled.View`
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    
+`;
 
 export const LeftIcon = styled.View`
     left: 15px;

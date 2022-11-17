@@ -35,7 +35,7 @@ const Login = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
-        navigation.replace("StudentDashboard");
+        navigation.replace("TutorDashboard");
       }
     })
 
@@ -48,7 +48,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredentials => {
         const user = userCredentials.user;
-        navigation.navigate("StudentDashboard");
+        navigation.navigate("TutorDashboard");
       })
       .catch(alert(password))
   }

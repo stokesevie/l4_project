@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, View, Text } from 'react-native';
 import styled from 'styled-components/native';
-import { ScrollText, RightArrow,colours } from './styles';
+import { ScrollText, Arrow,colours } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 
 const {secondary,primary}= colours;
@@ -25,11 +25,10 @@ const ContentView = styled.View`
     border-radius:5px;
     padding:10px;
     height: 100px;
-    overflow: hidden;
     margin-left: 10px;
 `;
 const Separator = styled.View`
-    height: 4;
+    height: 4px;
     width: 100%;
 `;
 
@@ -41,10 +40,16 @@ const TitleIcon = styled.View`
     display: flex;
     flex-direction:row;
 `;
+
+
+
 const ScrollList = props => {
     return(
         <View>
             <FlatList
+                style={{
+                    height: 589
+                }}
                 data={books}
                 keyExtractor={({ id }) => id.toString()}
                 ItemSeparatorComponent={() => <Separator />}
@@ -53,7 +58,7 @@ const ScrollList = props => {
                         <ContentView>
                             <TitleIcon>
                             <ScrollText>{item.title}</ScrollText>
-                            <RightArrow><Ionicons name="ios-arrow-forward" size={30} color={secondary}/></RightArrow>
+                            <Arrow><Ionicons name="alert" size={30} color={secondary}/></Arrow>
                             </TitleIcon>
                             <ScrollBodyText> You need to complete this survey</ScrollBodyText>
                         </ContentView>

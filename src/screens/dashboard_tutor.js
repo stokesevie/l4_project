@@ -19,8 +19,7 @@ import { TutorFeedbackNotifcation } from '../components/TutorFeedbackNotificatio
 
 const {secondary,primary}= colours;
 
-const TutorDashboard = () => {
-  const navigation = useNavigation();
+const TutorDashboard = ({navigation}) => {
     return (
         <View>
           <Dashboard></Dashboard>

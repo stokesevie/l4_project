@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import { NotificationTitle,StyledNotificationPast,NotificationText,RightArrow ,ContentsNotification,colours} from './styles'
+import { NotificationTitle,StyledNotificationPast,NotificationText,Arrow ,ContentsNotification,colours} from './styles'
 
 const {secondary,primary}= colours;
 

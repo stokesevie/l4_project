@@ -10,33 +10,36 @@ import {
     SubTitle,
     colours,
     DashboardInfo,
+    ContentJustified,
+    ContentsNotification
   } from '../components/styles';
 import { NavBar } from '../components/NavBar';
-import { PendingNotifications } from '../components/PendingSurveyNotifications';
-import { NotificationPast } from '../components/NotificationPastLab';
 import { TutorFeedbackNotifcation } from '../components/TutorFeedbackNotification';
+import { PendingStudentsTutors } from '../components/PendingStudentsTutors';
+import { render } from 'react-dom';
+import { MessagesNotification } from '../components/MessagesNotification';
 
 
 const {secondary,primary}= colours;
 
 const TutorDashboard = ({navigation}) => {
-    return (
-        <View>
-          <Dashboard></Dashboard>
+  return (
+      <View>
+        <ContentJustified>
+        <PageTitle>Mindmap</PageTitle>
+        <SubTitle> Welcome, Tutor !</SubTitle>
+          <PendingStudentsTutors>
+          </PendingStudentsTutors>
+          <MessagesNotification onClick={() =>
+            navigation.navigate("PendingSurveys")
+          }></MessagesNotification>
 
-          <PageTitle>Mindmap</PageTitle>
-          <SubTitle> Welcome, Tutor !</SubTitle>
-          <DashboardInfo>
-            <PendingNotifications></PendingNotifications>
-            <NotificationPast></NotificationPast>
-            <TutorFeedbackNotifcation></TutorFeedbackNotifcation>
+          </ContentJustified>
 
-            </DashboardInfo>
+          <NavBar></NavBar>
+          
 
-
-            <NavBar></NavBar>
-
-        </View>
-    )
+      </View>
+  )
 };
-export default StudentDashboard;
+export default TutorDashboard;

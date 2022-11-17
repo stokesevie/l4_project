@@ -5,12 +5,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './screens/login';
 import StudentDashboard from './screens/dashboard_student'
 import PendingSurveys from './screens/PendingSurveys'
-import TutorDashboard from './screens/dashboard_student'
+import TutorDashboard from './screens/dashboard_tutor'
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-    
     return (
         <NavigationContainer >
             <Stack.Navigator screenOptions={{

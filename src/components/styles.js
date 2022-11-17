@@ -40,6 +40,7 @@ export const PageTitle = styled.Text`
     font-weight: bold;
     color: ${secondary};
     padding: 10px;
+
 `;
 
 export const SubTitle= styled.Text`
@@ -66,6 +67,16 @@ export const StyledNotification = styled.TouchableOpacity`
     height: 120px;
     margin-bottom: 20px;
 `;
+
+export const StyledNotificationTutor = styled.View`
+    height:60%;
+    background-color: ${secondary};
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+`;
+
 export const StyledNotificationPast = styled.TouchableOpacity`
     padding: 15px;
     background-color: ${secondary};
@@ -91,6 +102,7 @@ export const NotificationTitle = styled.Text`
 `;
 
 export const NotificationText = styled.Text`
+    width:85%;
     color: ${primary};
     padding:15px;
     font-size: 16px;
@@ -116,16 +128,25 @@ export const StyledInputLabel = styled.Text`
     font-size: 15px;
     text-align: left;
 `;
-export const RightArrow = styled.View`
+
+export const Arrow = styled.Text`
     padding: 10px;
-    margin-left: auto;
+    width:50px; 
+    height: 50px 
 `;
 
 export const ContentsNotification = styled.View`
     display: flex;
     flex-direction:row;
+    justify-content: space-between;
 `;
 
+export const Title = styled.View`
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    
+`;
 
 export const LeftIcon = styled.View`
     left: 15px;
@@ -185,5 +206,27 @@ export const ScrollText = styled.Text`
     flex-direction:row;
     width: 80%;
     font-size: 19px;
-    font-color: ${thirdly};
+    color: white;
+    font-weight: bold;
 `
+const ContentView = styled.View`
+    border-width: 1px;
+    border-color: black;
+    border-radius:5px;
+    padding:10px;
+    height: 100px;
+    margin-left: 10px;
+`;
+const Separator = styled.View`
+    height: 4px;
+    width: 100%;
+`;
+
+const ScrollBodyText = styled.Text`
+    font-size: 12px;
+`;
+
+const TitleIcon = styled.View`
+    display: flex;
+    flex-direction:row;
+`;

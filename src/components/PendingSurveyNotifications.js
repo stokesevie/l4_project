@@ -1,5 +1,5 @@
 import React from "react";
-import { NotificationTitle,StyledNotification,NotificationText,RightArrow ,ContentsNotification,colours} from './styles'
+import { NotificationTitle,StyledNotification,NotificationText,Arrow ,ContentsNotification,colours} from './styles'
 import {Ionicons} from '@expo/vector-icons';
 import { NavigationHelpersContext, useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';
@@ -14,7 +14,7 @@ export class PendingNotifications extends React.Component {
               <NotificationTitle> Hello </NotificationTitle>
               <ContentsNotification>
               <NotificationText>You have 3 pending surveys</NotificationText>
-              <RightArrow><Ionicons name="ios-arrow-forward" size={30} color={primary}/></RightArrow>
+              <Arrow><Ionicons name="ios-arrow-forward" size={30} color={primary}/></Arrow>
               </ContentsNotification>
             </StyledNotification>
 

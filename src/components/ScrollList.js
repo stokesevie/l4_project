@@ -1,0 +1,65 @@
+import React from 'react';
+import { FlatList, View, Text } from 'react-native';
+import styled from 'styled-components/native';
+import { ScrollText, RightArrow,colours } from './styles';
+import { Ionicons } from '@expo/vector-icons';
+
+const {secondary,primary}= colours;
+
+const books = [
+    { id: 0, title: 'JavaScript & JQuery: Web Development' },
+    { id: 1, title: 'To Sleep in a Cloud of Stars' },
+    { id: 2, title: 'Dance on the Moon' },
+    { id: 3, title: 'Best birthday party with enemies' },
+    { id: 4, title: 'Second thought changed my life' },
+    { id: 5, title: 'Master data science with deep neural network' },
+    { id: 6, title: 'Rest Api with SpringBoot Data Rest Modified Title2' },
+    { id: 7, title: 'Rest Api with Django rest framework' },
+    { id: 8, title: 'Change life with Yoga' },
+    { id: 9, title: 'How the mind works' },
+    { id: 10, title: 'How to analyze people' }
+];
+const ContentView = styled.View`
+    border-width: 1px;
+    border-color: black;
+    border-radius:5px;
+    padding:10px;
+    height: 100px;
+    overflow: hidden;
+    margin-left: 10px;
+`;
+const Separator = styled.View`
+    height: 4;
+    width: 100%;
+`;
+
+const ScrollBodyText = styled.Text`
+    font-size: 12px;
+`;
+
+const TitleIcon = styled.View`
+    display: flex;
+    flex-direction:row;
+`;
+const ScrollList = props => {
+    return(
+        <View>
+            <FlatList
+                data={books}
+                keyExtractor={({ id }) => id.toString()}
+                ItemSeparatorComponent={() => <Separator />}
+                renderItem={
+                    ({ item }) => 
+                        <ContentView>
+                            <TitleIcon>
+                            <ScrollText>{item.title}</ScrollText>
+                            <RightArrow><Ionicons name="ios-arrow-forward" size={30} color={secondary}/></RightArrow>
+                            </TitleIcon>
+                            <ScrollBodyText> You need to complete this survey</ScrollBodyText>
+                        </ContentView>
+                }
+            />
+        </View>
+    );
+};
+export default ScrollList;

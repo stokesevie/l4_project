@@ -2,7 +2,7 @@ import React from "react";
 import { Toolbar, IconConstraint, IconToolbar,colours} from './../components/styles'
 import {Ionicons} from '@expo/vector-icons';
 
-const {secondary}= colours;
+const {secondary} = colours;
 
 export class NavBar extends React.Component {
     render(){

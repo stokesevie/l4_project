@@ -51,11 +51,12 @@ export const SubTitle= styled.Text`
     text-align:center;
 `;
 
-export const DashboardInfo = styled.View`
+export const ContentJustified = styled.View`
     padding-left:10px;
     padding-right:10px;
-    padding-top:10px;
+    padding-top:30px;
     margin:10px;
+    height:85.5%;
 `;
 
 export const StyledNotification = styled.TouchableOpacity`
@@ -156,20 +157,20 @@ export const ButtonText = styled.Text`
 
 export const Toolbar = styled.View`
     height:110px;
-    position :fixed
     width:110%;
     left:-10px;
     border-width:10px;
     border-top-color:${secondary};
     border-left-color:${primary};
     border-right-color:${primary};
-    padding: 10px;
-    display: flex;
-    flex-direction:row;
+    background-color: ${primary};
+    padding-left:35px;
+    padding-right:35px;
+    padding-top:15px;
  
 `;
 
-export const IconToolbar = styled.TouchableOpacity`
+export const IconToolbar = styled.View`
     
 `;
 
@@ -178,4 +179,11 @@ export const IconConstraint = styled.View`
     display: flex;
     flex-direction:row;
     width:94.5%;
+`
+
+export const ScrollText = styled.Text`
+    flex-direction:row;
+    width: 80%;
+    font-size: 19px;
+    font-color: ${thirdly};
 `

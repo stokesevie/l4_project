@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlatList, View, Text } from 'react-native';
 import styled from 'styled-components/native';
-import { ScrollText, Arrow,colours } from './styles';
+import { Arrow,colours } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 
 const {secondary,primary}= colours;
@@ -19,7 +19,8 @@ const books = [
     { id: 9, title: 'How the mind works' },
     { id: 10, title: 'How to analyze people' }
 ];
-const ContentView = styled.View`
+
+const ContentView = styled.TouchableOpacity`
     border-width: 1px;
     border-color: black;
     border-radius:5px;
@@ -30,6 +31,14 @@ const ContentView = styled.View`
 const Separator = styled.View`
     height: 4px;
     width: 100%;
+`;
+
+const ScrollText = styled.Text`
+    flex-direction:row;
+    width: 80%;
+    font-size: 19px;
+    font-weight: bold;
+    color:Black;
 `;
 
 const ScrollBodyText = styled.Text`
@@ -43,7 +52,9 @@ const TitleIcon = styled.View`
 
 
 
-const ScrollList = props => {
+class ScrollList extends React.Component {
+    render(){
+        const {navigation}= this.props
     return(
         <View>
             <FlatList
@@ -54,8 +65,8 @@ const ScrollList = props => {
                 keyExtractor={({ id }) => id.toString()}
                 ItemSeparatorComponent={() => <Separator />}
                 renderItem={
-                    ({ item }) => 
-                        <ContentView>
+                    ({item}) => 
+                        <ContentView onPress={()=>{navigation.navigate("StudentDashboard")}}>
                             <TitleIcon>
                             <ScrollText>{item.title}</ScrollText>
                             <Arrow><Ionicons name="alert" size={30} color={secondary}/></Arrow>
@@ -66,5 +77,9 @@ const ScrollList = props => {
             />
         </View>
     );
+    
+    }
 };
+
+
 export default ScrollList;

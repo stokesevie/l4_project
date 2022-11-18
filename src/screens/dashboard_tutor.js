@@ -30,13 +30,13 @@ const TutorDashboard = ({navigation}) => {
         <SubTitle> Welcome, Tutor !</SubTitle>
           <PendingStudentsTutors>
           </PendingStudentsTutors>
-          <MessagesNotification onClick={() =>
-            navigation.navigate("PendingSurveys")
+          <MessagesNotification onPress={() =>
+            navigation.navigate("StudentDashboard")
           }></MessagesNotification>
 
           </ContentJustified>
 
-          <NavBar></NavBar>
+          <NavBar navigation={navigation}></NavBar>
           
 
       </View>

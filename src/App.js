@@ -6,6 +6,8 @@ import Login from './screens/login';
 import StudentDashboard from './screens/dashboard_student'
 import PendingSurveys from './screens/PendingSurveys'
 import TutorDashboard from './screens/dashboard_tutor'
+import Messages from './screens/messages';
+import Labs from './screens/labs';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +21,8 @@ export default function App() {
                 <Stack.Screen name="StudentDashboard"component={StudentDashboard}/>
                 <Stack.Screen name="TutorDashboard"component={TutorDashboard}/>
                 <Stack.Screen name="PendingSurveys"component={PendingSurveys}/>
+                <Stack.Screen name="Messages"component={Messages}/>
+                <Stack.Screen name="Labs"component={Labs}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

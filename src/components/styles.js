@@ -191,7 +191,7 @@ export const Toolbar = styled.View`
  
 `;
 
-export const IconToolbar = styled.View`
+export const NavButton = styled.View`
     
 `;
 

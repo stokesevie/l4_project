@@ -42,7 +42,7 @@ const StudentDashboard = ({navigation}) => {
 
             </ContentJustified>
 
-            <NavBar></NavBar>
+            <NavBar navigation={navigation}></NavBar>
             
 
         </View>

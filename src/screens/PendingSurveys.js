@@ -37,9 +37,9 @@ const PendingSurveys = ({navigation}) => {
             </Title>
             <SubTitle> These are your outstanding surveys:
             </SubTitle>
-             <ScrollList></ScrollList>
+             <ScrollList navigation={navigation}></ScrollList>
             </ContentJustified>
-            <NavBar></NavBar>
+            <NavBar navigation={navigation}></NavBar>
 
         </View>
     )

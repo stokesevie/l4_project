@@ -208,7 +208,32 @@ export const ScrollText = styled.Text`
     font-size: 19px;
     color: white;
     font-weight: bold;
-`
+`;
+
+export const XYGrid = styled.TouchableOpacity`
+    background-color: black;
+    width:100%%;
+    height:50%;
+    
+    display:flex;
+`;
+
+export const XYGridText = styled.Text`
+    font-size:19px;
+    color: red;
+    text-align:center;
+    background-color: blue;
+`;
+
+export const XMin= styled.View`
+    flex-direction:column;  
+    justify-content:space-between;
+`;
+export const YMin= styled.View`
+    flex-direction:row;
+    justify-content:space-between;
+`;
+
 const ContentView = styled.View`
     border-width: 1px;
     border-color: black;

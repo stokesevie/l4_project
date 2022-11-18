@@ -8,6 +8,7 @@ import PendingSurveys from './screens/PendingSurveys'
 import TutorDashboard from './screens/dashboard_tutor'
 import Messages from './screens/messages';
 import Labs from './screens/labs';
+import Survey from './screens/survey'
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ export default function App() {
                 <Stack.Screen name="PendingSurveys"component={PendingSurveys}/>
                 <Stack.Screen name="Messages"component={Messages}/>
                 <Stack.Screen name="Labs"component={Labs}/>
+                <Stack.Screen name="Survey" component={Survey}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

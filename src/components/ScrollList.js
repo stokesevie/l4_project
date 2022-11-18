@@ -66,7 +66,7 @@ class ScrollList extends React.Component {
                 ItemSeparatorComponent={() => <Separator />}
                 renderItem={
                     ({item}) => 
-                        <ContentView onPress={()=>{navigation.navigate("StudentDashboard")}}>
+                        <ContentView onPress={()=>{navigation.navigate("Survey")}}>
                             <TitleIcon>
                             <ScrollText>{item.title}</ScrollText>
                             <Arrow><Ionicons name="alert" size={30} color={secondary}/></Arrow>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View} from 'react-native'
-import { XYGrid, XYGridText,XMin, YMin } from '../components/styles';
+import { XYGrid, XYGridText,XMin, YMin, Grid, YText, YTextMin } from '../components/styles';
 import { NavBar } from '../components/NavBar';
 import {
 
@@ -21,13 +21,15 @@ const Survey = ({navigation}) => {
             <XMin>
         <XYGridText>X Label Max</XYGridText> 
         </XMin>
-          <YMin><XYGridText >Y Label Min</XYGridText>
+          <YMin><YTextMin >Y Label Min</YTextMin>
+          <Grid></Grid>
           {/* style={{transform:[{rotate:'270deg'}]}} */}
-          <XYGridText>Y Label Max</XYGridText>
+          <YText> Y Label Max </YText>
+          
           </YMin>
-          <XMin>
+
           <XYGridText>X Label Min</XYGridText>
-          </XMin>
+
           </XYGrid>
           
           </ContentJustified>

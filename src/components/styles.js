@@ -210,28 +210,50 @@ export const ScrollText = styled.Text`
     font-weight: bold;
 `;
 
-export const XYGrid = styled.TouchableOpacity`
-    background-color: black;
+export const XYGrid = styled.View`
     width:100%%;
     height:50%;
     
-    display:flex;
 `;
 
 export const XYGridText = styled.Text`
     font-size:19px;
     color: red;
     text-align:center;
-    background-color: blue;
+`;
+
+export const YText = styled.Text` 
+    font-size:19px;
+    color: red;
+    text-align:center;
+  transform: rotate(-90deg);
+    left:25px;
+`;
+
+export const YTextMin = styled.Text` 
+    font-size:19px;
+    color: red;
+    text-align:center;
+  transform: rotate(90deg);
+  left:-58%
 `;
 
 export const XMin= styled.View`
     flex-direction:column;  
-    justify-content:space-between;
 `;
 export const YMin= styled.View`
     flex-direction:row;
-    justify-content:space-between;
+    height:87%;
+ 
+`;
+
+export const Grid = styled.TouchableOpacity`
+    border-width:2px;
+    flex-grow:1;
+    left:-72px;
+    width:85%;
+
+
 `;
 
 const ContentView = styled.View`
